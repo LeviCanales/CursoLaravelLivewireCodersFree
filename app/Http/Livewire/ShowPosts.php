@@ -15,6 +15,8 @@ class ShowPosts extends Component
     // {
     //     $this->name = $name;
     // }
+    //protected $listeners = ['render' => 'render'];
+    protected $listeners = ['render'];
 
     public function render()
     {

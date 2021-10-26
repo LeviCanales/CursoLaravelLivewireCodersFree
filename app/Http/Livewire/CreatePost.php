@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class CreatePost extends Component
 {
-    public $open = true;
+    public $open = false;
 
     public $title, $content;
 
@@ -17,6 +17,11 @@ class CreatePost extends Component
             'title' => $this->title,
             'content' => $this->content
         ]);
+
+        $this->reset(['open', 'title', 'content']);
+
+        $this->emitTo('show-posts','render');
+        $this->emit('alert', 'El post se creó satisfactoriamente');
     }
 
     public function render()
