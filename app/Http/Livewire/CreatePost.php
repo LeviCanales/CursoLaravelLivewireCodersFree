@@ -7,19 +7,23 @@ use Livewire\Component;
 
 class CreatePost extends Component
 {
-    public $open = false;
+    public $open = true;
 
     public $title, $content;
 
+    // protected $rules = [
+    //     'title' => 'required|max:10',
+    //     'content' => 'required|min:100',
+    // ];
     protected $rules = [
-        'title' => 'required|max:10',
-        'content' => 'required|min:100',
+        'title' => 'required',
+        'content' => 'required',
     ];
 
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
+    // public function updated($propertyName)
+    // {
+    //     $this->validateOnly($propertyName);
+    // }
 
     public function save()
     {
