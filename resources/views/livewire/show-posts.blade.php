@@ -101,6 +101,13 @@
                 </div>
             @endif
 
+            @if ($posts->hasPages())
+                <div class="px-6 py-3">
+                    {{$posts->links()}}
+                </div>
+            @endif
+            
+
         </x-table>
     </div>
 
