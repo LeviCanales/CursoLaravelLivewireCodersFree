@@ -3,7 +3,7 @@
       <i class="fas fa-edit"></i>  
     </a>
 
-    <x-jet-dialog-modal wire:model="open">
+    <x-jet-dialog-modal wire:model="open_edit">
 
         <x-slot name="title">
             Editar el post
