@@ -23,6 +23,8 @@ class ShowPosts extends Component
     
     public $open_edit = false;
 
+    protected $listeners = ['render', 'delete'];
+
     protected $queryString = [
         'cant' => ['except' => '10'], 
         'sort' => ['except' => 'id'], 
@@ -51,7 +53,6 @@ class ShowPosts extends Component
     //     $this->name = $name;
     // }
     //protected $listeners = ['render' => 'render'];
-    protected $listeners = ['render'];
 
     public function render()
     {
@@ -108,5 +109,10 @@ class ShowPosts extends Component
         $this->identificador = rand();
 
         $this->emit('alert', 'El post se actualizo satisfactoriamente');
+    }
+
+    public function delete(Post $post)
+    {
+        $post->delete();
     }
 }
