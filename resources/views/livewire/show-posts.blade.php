@@ -27,7 +27,7 @@
                 </div>
                 <x-jet-input class="flex-1 mx-4" placeholder="Escriba que quiere buscar" type="text" wire:model="search" />
 
-                @livewire('create-post');
+                @livewire('create-post')
             </div>
             @if (count($posts))
 
@@ -93,7 +93,7 @@
                                     {{ $item->title }}
                                 </td>
                                 <td class="px-6 py-4 text-sm text-gray-500">
-                                    {{ $item->content }}
+                                    {!! $item->content !!}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium flex">
                                     {{-- @livewire('edit-post', ['post' => $post], key($post->id)); --}}

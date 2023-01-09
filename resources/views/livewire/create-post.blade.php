@@ -26,7 +26,7 @@
                 <x-jet-input type="text" class="w-full" wire:model="title" />
                 {{-- @error('title')
                     <span>
-                        {{$message}};
+                        {{$message}}
                     </span>
                 @enderror --}}
                 <x-jet-input-error for="title" />
